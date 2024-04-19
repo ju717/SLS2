@@ -25,10 +25,10 @@ export default function Akkustand_Sensor() {
   }, []);
 
   return (
-    <div className=" m-2 h-36   w-1/2 justify-center rounded-md  bg-orange-200 p-2">
+    <div className="m-2 h-36 w-80 justify-center rounded-md bg-zinc-900 font-extrabold bg-opacity-85 p-2">
       <div className={roboto2.className}>
-        <div className="pt-5 text-center text-xl">Akkustand</div>
-        <div className="p-2 text-center text-5xl font-extralight text-[#AE445A] ">
+        <div className="pt-5 text-center text-2xl font-extrabold text-[#747de6]">Akkustand</div>
+        <div className="p-2 text-center text-5xl font-extrabold text-[#747de6]">
           {akkustand}%
         </div>
       </div>
