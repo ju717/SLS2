@@ -33,7 +33,6 @@ export default function Home() {
         backgroundSize: 'cover',
         backgroundImage: backgrounds[backgroundIndex],
       }}><CarouselDemo/></div>
-    
     </>
   );
 
