@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Image from "next/image";
 import Humidity_Sensor from "./akkustandAnzeige";
 import { CarouselDemo } from "./carouselDemo";
-
+//fssfsdf
 
 export default function Home() {
   const [backgroundIndex, setBackgroundIndex] = useState(0);
