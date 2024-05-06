@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import akkustandAnzeige from "./akkustandAnzeige";
 
 //const pin = new Gpio(17, {mode: Gpio.OUTPUT});
-pin.digitalWrite(0);
+//pin.digitalWrite(0);
 
 const roboto2 = Roboto({
     weight: "100",
