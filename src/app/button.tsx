@@ -7,7 +7,7 @@ import { io } from "socket.io-client";
 import { useRouter } from "next/navigation";
 import akkustandAnzeige from "./akkustandAnzeige";
 
-const pin = new Gpio(17, {mode: Gpio.OUTPUT});
+//const pin = new Gpio(17, {mode: Gpio.OUTPUT});
 pin.digitalWrite(0);
 
 const roboto2 = Roboto({
@@ -43,16 +43,16 @@ export function ButtonSwitch() {
       console.log("Hallo Zustand an");
       if(akkustand >= n){
         console.log("Akkustand über 80");
-        pin.digitalWrite(1);
+        //pin.digitalWrite(1);
       }
       else{
-        pin.digitalWrite(0);
+        //pin.digitalWrite(0);
         console.log("Akkustand unter 80");
       }
     }
     else if (switchState == true){
       console.log("Hallo Zustand aus");
-      pin.digitalWrite(0);
+      //pin.digitalWrite(0);
       //wenn akkustand 80 ausscahlten
     }
   }
