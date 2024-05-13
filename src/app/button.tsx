@@ -44,6 +44,7 @@ export function ButtonSwitch() {
       if(akkustand >= n){
         console.log("Akkustand über 80");
         //pin.digitalWrite(1);
+        fetch("http://localhost:8080/optimisierenAn");
       }
       else{
         //pin.digitalWrite(0);
