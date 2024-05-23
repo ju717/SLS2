@@ -39,19 +39,11 @@ export function ButtonSwitch() {
     setSwitchState(!switchState);
     // Hier kannst du weitere Aktionen ausführen, die beim Klicken des Buttons erfolgen sollen
     console.log("Hallo Zustand geändert");
-    if (switchState == false){
+    if (switchState == false && akkustand >= 80){
       console.log("Hallo Zustand an");
-      if(akkustand >= n){
-        console.log("Akkustand über 80");
-        //pin.digitalWrite(1);
-        fetch("http://localhost:8080/optimisierenAn");
-      }
-      else{
-        //pin.digitalWrite(0);
-        console.log("Akkustand unter 80");
-      }
+      fetch("http://localhost:5000/optimisiertesLaden");
     }
-    else if (switchState == true){
+    else if (switchState == true || akkustand < 80){
       console.log("Hallo Zustand aus");
       //pin.digitalWrite(0);
       //wenn akkustand 80 ausscahlten
