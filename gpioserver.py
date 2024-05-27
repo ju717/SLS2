@@ -1,14 +1,14 @@
 from flask import Flask, request
-#import RPi.GPIO as GPIO
+import RPi.GPIO as GPIO
 
 app = Flask(__name__)
 
-#GPIO.setmode (GPIO.BCM)
-#GPIO.setup (17, GPIO.OUT)
+GPIO.setmode (GPIO.BCM)
+GPIO.setup (37, GPIO.OUT)
 
 def turn_on_pin():
     print(f"Pin turned on with akkustand")
-    #GPIO.output(17, GPIO.HIGH)
+    GPIO.output(37, GPIO.HIGH)
 
 
 @app.route('/optimisiertesLaden', methods=['POST'])
