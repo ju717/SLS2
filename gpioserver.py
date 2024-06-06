@@ -10,7 +10,6 @@ def turn_on_pin():
     print(f"Pin turned on with akkustand")
     GPIO.output(37, GPIO.HIGH)
 
-
 @app.route('/optimisiertesLaden', methods=['POST'])
 def handle_akkustand():
     turn_on_pin()
