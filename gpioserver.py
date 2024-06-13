@@ -12,6 +12,7 @@ def turn_on_pin():
     print(f"Pin turned on with akkustand")
     GPIO.output(37, GPIO.HIGH)
 
+#jfasle
 @app.route('/optimisiertesLaden', methods=['POST'])
 @cross_origin()
 def handle_akkustand():
