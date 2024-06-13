@@ -3,7 +3,7 @@ import RPi.GPIO as GPIO
 from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
-cors = CORS(app)
+cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
 GPIO.setmode (GPIO.BCM)
 GPIO.setup (37, GPIO.OUT)
