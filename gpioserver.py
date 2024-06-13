@@ -12,6 +12,6 @@ def turn_on_pin():
 
 @app.route('/optimisiertesLaden', methods=['POST'])
 def handle_akkustand():
-    turn_on_pin()
+    turn_on_pin() 
     return "Pin status updated (simulated)"
 app.run(debug=True)
