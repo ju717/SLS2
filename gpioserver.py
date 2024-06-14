@@ -7,10 +7,11 @@ cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
 GPIO.setmode (GPIO.BCM)
 GPIO.setup (37, GPIO.OUT)
+GPIO.output(37, GPIO.HIGH)
 
 def turn_on_pin():
     print(f"Pin turned on with akkustand")
-    GPIO.output(37, GPIO.HIGH)
+    GPIO.output(37, GPIO.LOW)
 
 @app.route('/optimisiertesLaden', methods=['GET'])
 @cross_origin()
