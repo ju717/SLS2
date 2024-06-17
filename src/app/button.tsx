@@ -32,7 +32,7 @@ export function ButtonSwitch() {
 
   useEffect(() => {
     const makeRequest = async () => {
-      if (!switchState && akkustand >= 80) {
+      if (switchState && akkustand >= 80) {
         console.log("Making Request");
         try {
           const response = await fetch("http://localhost:5000/optimisiertesLaden");
@@ -40,9 +40,8 @@ export function ButtonSwitch() {
         } catch (error) {
           console.error("Error making request:", error);
         }
-      } else if (switchState || akkustand < 80) {
+      } else if (!switchState) {
         console.log("Hallo Zustand aus");
-        
       }
     };
 
